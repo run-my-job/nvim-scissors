@@ -1,16 +1,11 @@
 name: nvim type check
 
-on:
-  push:
-    branches: [main]
-    paths: ["**.lua"]
-  pull_request: 
-    paths: ["**.lua"]
+on: push
 
 jobs:
   build:
     name: nvim type check
-    runs-on: ubuntu-latest
+    runs-on: puzl-ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: stevearc/nvim-typecheck-action@v2

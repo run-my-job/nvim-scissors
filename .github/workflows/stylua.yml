@@ -1,16 +1,11 @@
 name: Stylua check
 
-on:
-  push:
-    branches: [main]
-    paths: ["**.lua"]
-  pull_request:
-    paths: ["**.lua"]
+on: push
 
 jobs:
   stylua:
     name: Stylua
-    runs-on: ubuntu-latest
+    runs-on: puzl-ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: JohnnyMorganz/stylua-action@v4
